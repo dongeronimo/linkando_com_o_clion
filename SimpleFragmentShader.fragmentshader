@@ -1,0 +1,12 @@
+#version 330 core
+//Dado vindo do fragment shader.
+varying vec4 colorToFrag;
+// Ouput data
+out vec4 color;
+
+void main()
+{
+
+	color = colorToFrag;
+
+}

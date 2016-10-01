@@ -1,0 +1,14 @@
+#version 330 core
+
+layout(location = 0) in vec4 vertexColor;
+// Input vertex data, different for all executions of this shader.
+layout(location = 1) in vec3 vertexPosition_modelspace;
+//cor sendo enviada pro fragment shader.
+varying vec4 colorToFrag;
+void main()
+{
+	gl_Position.xyz = vertexPosition_modelspace;
+    gl_Position.w = 1.0;
+	colorToFrag = vertexColor;
+}
+
